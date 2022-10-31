@@ -1,0 +1,18 @@
+# Python3 Program for finding
+# nth Delannoy Number.
+
+# Return the nth Delannoy Number.
+def Delannoy(n, m):
+	
+	# Base case
+	if (m == 0 or n == 0) :
+		return 1
+
+	# Recursive step.
+	return Delannoy(m - 1, n) + Delannoy(m - 1, n - 1) + Delannoy(m, n - 1)
+
+# Driven code
+n = 3
+m = 4;
+print( Delannoy(n, m) )
+
