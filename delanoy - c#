@@ -1,0 +1,27 @@
+// C# Program for finding nth Delannoy Number.
+using System;
+
+public class GfG {
+
+	// Return the nth Delannoy Number.
+	public static int Delannoy(int n, int m)
+	{
+
+		// Base case
+		if (m == 0 || n == 0)
+			return 1;
+
+		// Recursive step.
+		return dealnnoy(m - 1, n) +
+			dealnnoy(m - 1, n - 1) +
+					dealnnoy(m, n - 1);
+	}
+
+	// driver function
+	public static void Main()
+	{
+		int n = 3, m = 4;
+		Console.WriteLine(dealnnoy(n, m));
+	}
+}
+
